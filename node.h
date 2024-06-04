@@ -21,7 +21,7 @@ public:
   }
 
   void received(Packet* Packet, Node* fromNode){
-    
+    std::cout<< "Node #" << id_ << "received packet from node #" << fromNode->id() << "\n";
   }
 };
 
