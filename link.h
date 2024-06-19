@@ -22,6 +22,8 @@ private:
 
   void onReceive(Node* sender, Packet* packet) {
     Node* receiver = other(sender);
+    std::cout << "Link: forwarding packet from node #"
+    << sender->id() << ", to node #" << receiver->id();
     receiver->onReceive(packet);
   }
 };
